@@ -1,0 +1,1 @@
+java -cp .;gson.jar org.gbc.kinect.SyncServer 8000

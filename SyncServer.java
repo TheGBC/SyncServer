@@ -107,8 +107,8 @@ public class SyncServer {
     
     public Vector3(JsonObject object) {
       this.x = object.getAsJsonPrimitive("x").getAsLong();
-      this.y = object.getAsJsonPrimitive("x").getAsLong();
-      this.z = object.getAsJsonPrimitive("x").getAsLong();
+      this.y = object.getAsJsonPrimitive("y").getAsLong();
+      this.z = object.getAsJsonPrimitive("z").getAsLong();
     }
     
     public JsonElement toJson() {
