@@ -1,0 +1,30 @@
+// These are example JSON formats. There are 2 main type of commands: ACTION and POLL
+
+ACTION  specifies a velocity and position of a JSON Object that was created, along with the timestamp that JSON Object was created with. An example JSON is as follows:
+{
+  "type": "add",
+  "action": {
+    "timestamp": "12345",
+    "velocity": {
+      "x": 1123,
+      "y": 256,
+      "z": 464
+    },
+    "position": {
+      "x": 1.123,
+      "y": 2.56,
+      "z": 4.64
+    }
+  }
+}
+
+POLL asks the servers for all JSON objects stored between two timestamps. It looks as so:
+{
+  "type": "poll",
+  "start": 0,
+  "end": 100
+}
+
+Be aware that the server code automatically adds 1500 milliseconds to any request made(as of 7/17/2014)
+
+

@@ -35,7 +35,7 @@ public class SyncServer {
   
   public void receive(JsonObject action) {
     Action actionObj = new Action(action);
-    actionObj.millis += 1500;
+    actionObj.millis += 1500; //WHY IS THIS HERE???
     synchronized (DATA_LOCK) {
       storedActions.add(actionObj);
     }
